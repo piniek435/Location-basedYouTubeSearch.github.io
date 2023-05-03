@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shadows+Into+Light&display=swap" rel="stylesheet" />
+    <link rel="icon" href="favicon.png" />
+    <script defer src="script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEIknK8qz2R6cGiDHyGGPF10VUHgAalNU&callback=initAutocomplete&libraries=places&v=weekly"></script>
+    <title>Location-based YouTube search</title>
+  </head>
+  <body>
+    <div class="main">
+      <p class="title">Discover YouTube Videos Based on Location Name</p>
+      <section class="container">
+        <div class="search">
+          <div class="input-wrap input-wrap--location">
+            <label class="labal">Location</label>
+            <input class="map-input" id="pac-input" />
+          </div>
+          <div class="input-wrap">
+            <div class="suffix">km</div>
+            <label class="labal">Radius</label>
+            <input class="radius-input" type="number" value="5" min="1" />
+          </div>
+          <div class="input-wrap">
+            <label class="labal">Sort by</label>
+            <select class="sort-input">
+              <option value="date">Date</option>
+              <option value="rating">Rating</option>
+              <option value="relevance">Relevance</option>
+              <option value="viewCount">View Count</option>
+            </select>
+          </div>
+          <button class="btn-search" alt="search">
+            <img class="search-img" src="svg/search-icon.svg" />
+          </button>
+        </div>
+        <div class="noVideo">
+          <img src="svg/video-icon.svg" alt="video icon" class="video-icon" />
+          <p>No videos</p>
+        </div>
+        <div class="videos"></div>
+      </section>
+      <section class="container container-map" id="map"></section>
+      <section class="container container-video hidden">
+        <iframe class="player" src="https://www.youtube-nocookie.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </section>
+      <p class="copyright">Image by <a href="https://www.freepik.com/free-vector/selection-hand-drawn-cinema-objects_1023736.htm#query=clapperboard&position=3&from_view=search&track=sph#position=3&query=clapperboard">Freepik</a></p>
+    </div>
+  </body>
+</html>
+<!-- 
+
+
+ -->
