@@ -1,5 +1,5 @@
 ("use strict");
-// Fix radius!
+
 const searchBtn = document.querySelector(".btn-search");
 const containerVideos = document.querySelector(".videos");
 const radiusInput = document.querySelector(".radius-input");
@@ -39,8 +39,8 @@ class App {
   }
   getData() {
     this.setRadius();
-    // fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&location=${coords.lat}%2C${coords.lng}&locationRadius=${radius}km&order=${order}&maxResults=15&type=video&key=AIzaSyAEIknK8qz2R6cGiDHyGGPF10VUHgAalNU&pageToken=${next}`)
-    fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&location=${coords.lat}%2C${coords.lng}&locationRadius=${radius}km&order=${order}&maxResults=6&type=video&key=AIzaSyAEIknK8qz2R6cGiDHyGGPF10VUHgAalNU&`)
+    fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&location=${coords.lat}%2C${coords.lng}&locationRadius=${radius}km&order=${order}&maxResults=15&type=video&key=AIzaSyAEIknK8qz2R6cGiDHyGGPF10VUHgAalNU&pageToken=${next}`)
+      // fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&location=${coords.lat}%2C${coords.lng}&locationRadius=${radius}km&order=${order}&maxResults=6&type=video&key=AIzaSyAEIknK8qz2R6cGiDHyGGPF10VUHgAalNU&`)
       .then((resp) => {
         return resp.json();
       })
