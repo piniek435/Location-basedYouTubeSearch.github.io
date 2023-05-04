@@ -42,9 +42,7 @@ class App {
   }
   getData() {
     this.setRadius();
-    fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&location=${coords.lat}%2C${coords.lng}&locationRadius=${radius}km&order=${order}&maxResults=15&type=video&key=AIzaSyAEIknK8qz2R6cGiDHyGGPF10VUHgAalNU&pageToken=${next}`, {
-      referrer: "https://piniek435.github.io/Location-basedYouTubeSearch.github.io/",
-    })
+    fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&location=${coords.lat}%2C${coords.lng}&locationRadius=${radius}km&order=${order}&maxResults=15&type=video&key=AIzaSyBfGV0MUj9ckxJhNRnExMk8zBs1BlY2I9Y&pageToken=${next}`)
       // fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&location=${coords.lat}%2C${coords.lng}&locationRadius=${radius}km&order=${order}&maxResults=6&type=video&key=AIzaSyAEIknK8qz2R6cGiDHyGGPF10VUHgAalNU&`)
       .then((resp) => {
         return resp.json();
