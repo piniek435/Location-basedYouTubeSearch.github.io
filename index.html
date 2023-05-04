@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="queries.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shadows+Into+Light&display=swap" rel="stylesheet" />
     <link rel="icon" href="favicon.png" />
     <script defer src="script.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEIknK8qz2R6cGiDHyGGPF10VUHgAalNU&callback=initAutocomplete&libraries=places&v=weekly"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEIknK8qz2R6cGiDHyGGPF10VUHgAalNU&callback=initAutocomplete&libraries=places&v=weekly"></script>
     <title>Location-based YouTube search</title>
   </head>
   <body>
@@ -21,7 +21,7 @@
         <div class="search">
           <div class="input-wrap input-wrap--location">
             <label class="labal">Location</label>
-            <input class="map-input" id="pac-input" />
+            <input class="map-input" id="pac-input" autocomplete="off" />
           </div>
           <div class="input-wrap">
             <div class="suffix">km</div>
@@ -49,7 +49,7 @@
       </section>
       <section class="container container-map" id="map"></section>
       <section class="container container-video hidden">
-        <iframe class="player" src="https://www.youtube-nocookie.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe class="player" src="https://www.youtube-nocookie.com/embed/" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
       </section>
       <p class="copyright">Image by <a href="https://www.freepik.com/free-vector/selection-hand-drawn-cinema-objects_1023736.htm#query=clapperboard&position=3&from_view=search&track=sph#position=3&query=clapperboard">Freepik</a></p>
     </div>
