@@ -19,6 +19,9 @@ class App {
     searchBtn.addEventListener("click", () => {
       this.startSearch();
     });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") this.startSearch();
+    });
   }
 
   startSearch() {
