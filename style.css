@@ -209,7 +209,8 @@ input[type="number"] {
   padding: 0.8rem;
   gap: 1.2rem;
   align-items: center;
-  height: fit-content;
+  height: -webkit-max-content;
+  width: 100%;
 }
 
 .video:hover {
