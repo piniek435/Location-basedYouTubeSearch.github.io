@@ -4,6 +4,7 @@ const searchBtn = document.querySelector(".btn-search");
 const containerVideos = document.querySelector(".videos");
 const radiusInput = document.querySelector(".radius-input");
 const orderInput = document.querySelector(".sort-input");
+const mapInput = document.getElementById("pac-input");
 
 let loading = "";
 let coords = { lat: 0, lng: 0 };
@@ -20,7 +21,8 @@ class App {
       this.startSearch();
     });
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") this.startSearch();
+      console.log(document.activeElement);
+      if (e.key === "Enter" && document.activeElement !== mapInput) this.startSearch();
     });
   }
 
@@ -118,8 +120,7 @@ function initAutocomplete() {
     // styles:
   });
 
-  const input = document.getElementById("pac-input");
-  const searchBox = new google.maps.places.SearchBox(input);
+  const searchBox = new google.maps.places.SearchBox(mapInput);
 
   map.addListener("bounds_changed", () => {
     searchBox.setBounds(map.getBounds());
@@ -130,6 +131,7 @@ function initAutocomplete() {
     places = searchBox.getPlaces();
     document.querySelector(".container-map").classList.remove("hidden");
     document.querySelector(".container-video").classList.add("hidden");
+    mapInput.blur();
     if (places.length == 0) {
       return;
     }
