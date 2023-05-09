@@ -132,6 +132,7 @@ function initAutocomplete() {
     document.querySelector(".container-map").classList.remove("hidden");
     document.querySelector(".container-video").classList.add("hidden");
     mapInput.blur();
+    app.startSearch();
     if (places.length == 0) {
       return;
     }
