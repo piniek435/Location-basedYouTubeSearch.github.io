@@ -1,0 +1,41 @@
+/* Em=16px */
+@media (max-width: 64em) {
+  .suffix {
+    left: 65%;
+  }
+}
+@media (max-width: 44em) {
+  .title {
+    font-size: 1.6rem;
+    top: -3rem;
+  }
+  .search {
+    padding-right: 1.5rem;
+    border-radius: 25px 25px 0 0;
+  }
+  .container {
+    border-radius: 25px 25px 0 0;
+  }
+  .player,
+  .container-video,
+  .container-map {
+    border-radius: 0 0 25px 25px;
+  }
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.25fr;
+  }
+}
+
+@media (max-width: 27.25em) {
+  .suffix {
+    left: 60%;
+  }
+}
+
+@media (max-width: 22em) {
+  .title {
+    font-size: 1.4rem;
+  }
+}
