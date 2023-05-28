@@ -16,7 +16,6 @@ let next = "";
 let places = [];
 let radius = 5;
 let order = "date";
-let test = "test";
 
 class App {
   constructor() {
