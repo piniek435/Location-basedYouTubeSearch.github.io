@@ -44,7 +44,7 @@ class App {
   async getData() {
     try {
       this.setRadius();
-      const response = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&location=${coords.lat}%2C${coords.lng}&locationRadius=${radius}km&order=${order}&maxResults=15&type=video&key=AIzaSyBfGjV0MUj9ckxJhNRnExMk8zBs1BlY2I9Y&pageToken=${next}`);
+      const response = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&location=${coords.lat}%2C${coords.lng}&locationRadius=${radius}km&order=${order}&maxResults=15&type=video&key=AIzaSyBfGV0MUj9ckxJhNRnExMk8zBs1BlY2I9Y&pageToken=${next}`);
       const data = await response.json();
       next = data.nextPageToken;
 
